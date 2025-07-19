@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills to Save the Planet – PyleaMUN Synergy</title>
+  <!-- Playful handwritten font -->
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #009688;
+      --gold: #d4af37;
+      --offwhite: #fdfbf6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Kalam', cursive;
+      background: var(--offwhite);
+      color: var(--teal);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 1.5rem 1rem 1rem;
+    }
+    .title-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      width: 48px;
+      height: auto;
+    }
+    h1 {
+      font-size: 2.5rem; /* Increased from 2.3rem */
+      letter-spacing: 1px;
+      color: var(--teal);
+    }
+    h2 {
+      margin-top: 0.8rem; /* Increased from 0.6rem */
+      font-size: 1.4rem; /* Increased from 1.2rem */
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .tagline {
+      margin-top: 0.6rem; /* Increased from 0.4rem */
+      font-size: 1.1rem; /* Increased from 1rem */
+      font-weight: 700;
+    }
+    .intro {
+      max-width: 720px;
+      margin: 1rem auto 1.6rem; /* Increased margins */
+      padding: 0 0.8rem;
+      font-size: 1.05rem; /* Increased from 0.95rem */
+      line-height: 1.4; /* Slightly increased */
+      color: #045b56;
+      text-align: center;
+    }
+    .skills-grid {
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+      gap: 2.2rem 1rem;
+      padding: 1rem 0 2rem; /* Reduced bottom padding */
+    }
+    .skill-card {
+      background: #fff;
+      border: 2.5px dashed var(--gold);
+      border-radius: 16px;
+      padding: 0.8rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+      z-index: 1;
+    }
+    .skill-card:hover {
+      transform: rotate(-1deg) translateY(-6px);
+      z-index: 20;
+    }
+    .icon {
+      font-size: 2.4rem;
+      margin-bottom: 0.3rem;
+    }
+    .skill-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .tooltip-text {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 8px);
+      width: 230px;
+      background: var(--teal);
+      color: var(--offwhite);
+      padding: 0.7rem 0.9rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      line-height: 1.25;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      z-index: 50;
+      pointer-events: none;
+    }
+    .tooltip-text::before {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 7px 7px 0 7px;
+      border-style: solid;
+      border-color: var(--teal) transparent transparent transparent;
+    }
+    .skill-card:hover .tooltip-text {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0);
+    }
+    footer {
+      margin-top: auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .stamp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+      margin: 1rem auto; /* Reduced from 2rem auto 1rem */
+      text-align: center;
+    }
+    .stamp-img {
+      width: 80px; /* Increased from 70px */
+      height: auto;
+    }
+    .stamp-text {
+      font-size: 1.1rem; /* Increased from 0.95rem */
+      font-weight: 700;
+      max-width: 260px;
+    }
+    .date {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .lamp-img {
+      margin-top: 1rem;
+      width: 90px;
+      height: auto;
+    }
+    @media(max-width: 360px) {
+      .logo { width: 38px; }
+      h1 { font-size: 1.9rem; }
+      h2 { font-size: 1rem; }
+      .skills-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2rem 0.8rem; }
+      .icon { font-size: 2.2rem; }
+      .skill-title { font-size: 0.9rem; }
+      .tooltip-text { width: 200px; font-size: 0.75rem; }
+      .stamp-img { width: 60px; }
+      .stamp-text { font-size: 0.85rem; }
+      .lamp-img { width: 75px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <div class="title-wrap">
+    <img src="logo.png" alt="PyleaMUN logo" class="logo">
+    <h1>Skills to Save the Planet</h1>
+  </div>
+  <h2>The EU Suggests 17 Skills to Save the Planet!!</h2>
+  <p class="tagline">Every EU "Skill to Save the Planet" already lives and breathes inside <strong>PyleaMUN</strong></p>
+  <p class="intro">Every EU‑listed planet‑saving skill isn't just encouraged at <strong>PyleaMUN</strong>—it's baked into the rules, agendas, and day‑to‑day committee life, giving delegates a live laboratory for the competencies the world needs most.</p>
+  </header>
+
+  <section class="skills-grid">
+    <div class="skill-card"><div class="icon">👥</div><div class="skill-title">team work</div><p class="tooltip-text">Lobbying requires delegates to collaborate, form alliances and work towards consensus.</p></div>
+    <div class="skill-card"><div class="icon">🧩</div><div class="skill-title">problem‑solving</div><p class="tooltip-text">Delegates craft innovative resolutions that tackle real‑world crises.</p></div>
+    <div class="skill-card"><div class="icon">🔬</div><div class="skill-title">understanding science</div><p class="tooltip-text">Science‑focused committees explore topics demanding solid scientific literacy.</p></div>
+    <div class="skill-card"><div class="icon">💡</div><div class="skill-title">expressing ideas</div><p class="tooltip-text">Debate revolves around speeches that defend, question and refine ideas.</p></div>
+    <div class="skill-card"><div class="icon">🌱</div><div class="skill-title">relationship with nature</div><p class="tooltip-text">UNEP's agenda balances ecotourism and conservation in heritage sites.</p></div>
+    <div class="skill-card"><div class="icon">🤲</div><div class="skill-title">sharing</div><p class="tooltip-text">Conference culture prizes open dialogue and sharing perspectives across cultures.</p></div>
+    <div class="skill-card"><div class="icon">🤝</div><div class="skill-title">compromising</div><p class="tooltip-text">Consensus‑building refines texts acceptable to diverse blocs before a vote.</p></div>
+    <div class="skill-card"><div class="icon">❤️</div><div class="skill-title">having empathy</div><p class="tooltip-text">Diverse delegates step into others' shoes and debate with respect.</p></div>
+    <div class="skill-card"><div class="icon">📋</div><div class="skill-title">being pro‑active</div><p class="tooltip-text">Success comes from proactively proposing, discussing and leading coalitions.</p></div>
+    <div class="skill-card"><div class="icon">🔍</div><div class="skill-title">curiosity</div><p class="tooltip-text">Delegates stay updated on developments and research beyond study guides.</p></div>
+    <div class="skill-card"><div class="icon">📊</div><div class="skill-title">understanding data</div><p class="tooltip-text">Pre‑conference research with UN stats and indicators builds data literacy.</p></div>
+    <div class="skill-card"><div class="icon">🧭</div><div class="skill-title">leadership</div><p class="tooltip-text">Chairs & Main Submitters practise real facilitative leadership.</p></div>
+    <div class="skill-card"><div class="icon">🧠</div><div class="skill-title">critical thinking</div><p class="tooltip-text">Delegates analyse causes, impacts and feasibility of policies.</p></div>
+    <div class="skill-card"><div class="icon">🔄</div><div class="skill-title">adaptability</div><p class="tooltip-text">Switching between speeches and caucuses helps delegates adapt on the fly.</p></div>
+    <div class="skill-card"><div class="icon">👓</div><div class="skill-title">seeing others' perspective</div><p class="tooltip-text">Representing countries helps participants adopt alternative viewpoints.</p></div>
+    <div class="skill-card"><div class="icon">😌</div><div class="skill-title">staying calm under stress</div><p class="tooltip-text">Rules of Procedure promote diplomacy and composure under pressure.</p></div>
+    <div class="skill-card"><div class="icon">🧡</div><div class="skill-title">emotional intelligence</div><p class="tooltip-text">Respect, open dialogue and cooperation are essential PyleaMUN values.</p></div>
+  </section>
+
+  <div class="stamp">
+    <img src="blue.png" alt="EU Blue Logo" class="stamp-img">
+    <div class="stamp-text">
+      Empowering tomorrow.<br>
+      Youth-driven innovation for a world that lasts<br>
+      January 22nd – 24th 2026
+    </div>
+  </div>
+
+</body>
+</html>
