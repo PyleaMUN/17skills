@@ -37,27 +37,27 @@
       height: auto;
     }
     h1 {
-      font-size: 2.5rem; /* Increased from 2.3rem */
+      font-size: 2.5rem;
       letter-spacing: 1px;
       color: var(--teal);
     }
     h2 {
-      margin-top: 0.8rem; /* Increased from 0.6rem */
-      font-size: 1.4rem; /* Increased from 1.2rem */
+      margin-top: 0.8rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: var(--gold);
     }
     .tagline {
-      margin-top: 0.6rem; /* Increased from 0.4rem */
-      font-size: 1.1rem; /* Increased from 1rem */
+      margin-top: 0.6rem;
+      font-size: 1.1rem;
       font-weight: 700;
     }
     .intro {
       max-width: 720px;
-      margin: 1rem auto 1.6rem; /* Increased margins */
+      margin: 1rem auto 1.6rem;
       padding: 0 0.8rem;
-      font-size: 1.05rem; /* Increased from 0.95rem */
-      line-height: 1.4; /* Slightly increased */
+      font-size: 1.05rem;
+      line-height: 1.4;
       color: #045b56;
       text-align: center;
     }
@@ -68,7 +68,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
       gap: 2.2rem 1rem;
-      padding: 1rem 0 2rem; /* Reduced bottom padding */
+      padding: 1rem 0 2rem;
     }
     .skill-card {
       background: #fff;
@@ -137,27 +137,29 @@
       justify-content: center;
       gap: 0.7rem;
       flex-wrap: wrap;
-      margin: 1rem auto; /* Reduced from 2rem auto 1rem */
+      margin: 1rem auto;
       text-align: center;
     }
     .stamp-img {
-      width: 80px; /* Increased from 70px */
+      width: 80px;
       height: auto;
     }
     .stamp-text {
-      font-size: 1.1rem; /* Increased from 0.95rem */
+      font-size: 1.1rem;
       font-weight: 700;
       max-width: 260px;
     }
-    .date {
-      margin-top: 0.8rem;
-      font-size: 0.9rem;
-      font-weight: 600;
+    .hidden-link {
+      display: block;
+      text-align: center;
+      margin: 1.5rem auto;
+      font-size: 2rem;
+      text-decoration: none;
+      color: var(--teal);
+      transition: transform 0.2s;
     }
-    .lamp-img {
-      margin-top: 1rem;
-      width: 90px;
-      height: auto;
+    .hidden-link:hover {
+      transform: scale(1.1);
     }
     @media(max-width: 360px) {
       .logo { width: 38px; }
@@ -169,19 +171,18 @@
       .tooltip-text { width: 200px; font-size: 0.75rem; }
       .stamp-img { width: 60px; }
       .stamp-text { font-size: 0.85rem; }
-      .lamp-img { width: 75px; }
     }
   </style>
 </head>
 <body>
   <header>
-  <div class="title-wrap">
-    <img src="logo.png" alt="PyleaMUN logo" class="logo">
-    <h1>Skills to Save the Planet</h1>
-  </div>
-  <h2>The EU Suggests 17 Skills to Save the Planet!!</h2>
-  <p class="tagline">Every EU "Skill to Save the Planet" already lives and breathes inside <strong>PyleaMUN</strong></p>
-  <p class="intro">Every EU‑listed planet‑saving skill isn't just encouraged at <strong>PyleaMUN</strong>—it's baked into the rules, agendas, and day‑to‑day committee life, giving delegates a live laboratory for the competencies the world needs most.</p>
+    <div class="title-wrap">
+      <img src="logo.png" alt="PyleaMUN logo" class="logo">
+      <h1>Skills to Save the Planet</h1>
+    </div>
+    <h2>The EU Suggests 17 Skills to Save the Planet!!</h2>
+    <p class="tagline">Every EU "Skill to Save the Planet" already lives and breathes inside <strong>PyleaMUN</strong></p>
+    <p class="intro">Every EU‑listed planet‑saving skill isn't just encouraged at <strong>PyleaMUN</strong>—it's baked into the rules, agendas, and day‑to‑day committee life, giving delegates a live laboratory for the competencies the world needs most.</p>
   </header>
 
   <section class="skills-grid">
@@ -212,6 +213,8 @@
       January 22nd – 24th 2026
     </div>
   </div>
+
+<a href="https://pyleamun.github.io/pyleamun2026/" class="hidden-link" aria-label="Visit PyleaMUN official website" target="_blank" rel="noopener noreferrer">🌐</a>
 
 </body>
 </html>
